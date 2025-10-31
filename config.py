@@ -1,0 +1,37 @@
+import argparse
+import os
+
+
+def get_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--data_dir", default="./benchmark/7_activity")
+    parser.add_argument("--label_dir", default="./benchmark/7_activity")
+    parser.add_argument("-d", "--dataset", default="", type=str)
+    parser.add_argument("-td", "--target_dataset", default="", type=str)
+    parser.add_argument("-df", "--data_file", default="data_20_120.npy", type=str)
+    parser.add_argument("-lf", "--label_file", default="label_20_120.npy", type=str)
+    parser.add_argument("--L", default=120, type=int)
+    parser.add_argument("--N", default=6, type=int)
+    parser.add_argument("--n_class", default=7, type=int)
+    parser.add_argument("--model_path", default="./save_model")
+    parser.add_argument("--train_rate", default=0.8, type=float)
+    parser.add_argument("--valid_rate", default=0.1, type=float)
+    parser.add_argument("--test_rate", default=0.1, type=float)
+    parser.add_argument("--seed", default=0, type=int)
+    parser.add_argument("-ps", "--patch_size", default=30, type=int)
+    parser.add_argument("-s", "--stride", default=10, type=int)
+    parser.add_argument("--embed_dim", default=128, type=int)
+    parser.add_argument("--normalization", default=True, type=bool)
+    parser.add_argument("--pretrain_batch_size", default=512, type=int)
+    parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument("--pretrain_lr", type=float, default=1e-4)
+    parser.add_argument("--pretrain_layers", default=1, type=int)
+    parser.add_argument("--pretrain_nhead", default=4, type=int)
+    parser.add_argument("--finetune_batch_size", default=256, type=int)
+    parser.add_argument("--ft_epochs", type=int, default=150)
+    parser.add_argument("--ft_lr", type=float, default=1e-3)
+    parser.add_argument("--ft_freeze", action="store_true", default=True)
+    parser.add_argument("--ft_frac", default=0.1, type=float)
+    args = parser.parse_args()
+    os.makedirs(args.model_path, exist_ok=True)
+    return args
