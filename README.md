@@ -1,8 +1,10 @@
 # Next Token Prediction for Generalizable Human Activity Recognition
 
-This repository provides the official implementation for our paper “Next Token Prediction for Generalizable Human Activity Recognition”. In this work, we introduce NextHAR, a novel next-token prediction pretraining paradigm for Inertial Measurement Unit (IMU)–based Human Activity Recognition (HAR), and establish a large-scale cross-dataset benchmark covering up to eight activity categories.
+This repository provides the official implementation for our paper “Next Token Prediction for Generalizable Human Activity Recognition”. In this work, we introduce NextHAR, a novel next-token prediction pretraining paradigm for Inertial Measurement Unit (IMU) sensor–based Human Activity Recognition (HAR), and establish a large-scale cross-domain benchmark covering up to eight activity categories.
 
+<!---
 ![trend](assets/framework.jpg)
+-->
 
 ## Requirement
 To install the required dependencies, please run:
@@ -12,7 +14,7 @@ pip install -r requirements.txt
 
 ## Benchmark
 
-We construct a comprehensive cross-dataset benchmark designed to evaluate the generalization capability of IMU-based HAR models.
+We construct a comprehensive cross-domain benchmark designed to evaluate the generalization capability of sensor-based HAR models.
 The benchmark comprises three evaluation settings with increasing difficulty levels, utilizing nine widely used HAR datasets:
 SBHAR, HHAR, Shoaib, Motion, DSADS, PAMAP2, TNDA, USC-HAD, and KU-HAR.
 
@@ -27,8 +29,8 @@ You can download the cross-dataset benchmark at [here](https://zenodo.org/record
 
 The NextHAR framework consists of four major stages:
 
-- Sensor Data Tokenization – Convert IMU data into expressive token representations.
-- Sensor Foundation Pretraining – Conduct autoregressive pretraining based on the next-token prediction objective specifically designed for IMU data.
+- Sensor Data Tokenization – Convert sensor data into expressive token representations.
+- Sensor Token Pretraining – Conduct autoregressive pretraining based on the next token prediction objective specifically designed for sensor data.
 - Activity Recognition Fine-Tuning – Fine-tune the pretrained model on a small number of labeled samples from a source dataset.
 - Cross-Dataset Evaluation – Evaluate cross-dataset generalization capability on the proposed benchmark.
 
