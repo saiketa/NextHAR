@@ -1,6 +1,6 @@
-# Next Token Prediction for Generalizable Human Activity Recognition
+# Next Token Prediction for Generalizable Human Activity Recognition [CIKM 2026]
 
-This repository provides the official implementation for our paper “Next Token Prediction for Generalizable Human Activity Recognition”. In this work, we introduce NextHAR, a novel next-token prediction pretraining paradigm for Inertial Measurement Unit (IMU) sensor–based Human Activity Recognition (HAR), and establish a large-scale cross-domain benchmark covering up to eight activity categories.
+This repository provides the official implementation for our paper “**Next Token Prediction for Generalizable Human Activity Recognition**”, accepted by the *ACM Conference on Knowledge and Information Management (CIKM 2026)*. In this work, we introduce NextHAR, a novel next-token prediction pretraining paradigm for Inertial Measurement Unit (IMU) sensor–based Human Activity Recognition (HAR), and establish a large-scale cross-domain benchmark covering up to eight activity categories.
 
 <!---
 ![trend](assets/framework.jpg)
