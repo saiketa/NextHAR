@@ -71,3 +71,15 @@ python cross_dataset_test.py --data_dir ./benchmark/7_activity --n_class 7 -d DS
 # 8-activity
 python cross_dataset_test.py --data_dir ./benchmark/8_activity --n_class 8 -d KU-HAR -td DSADS
 ```
+
+## Citation
+
+```
+@inproceedings{cai2026next,
+  title={Next Token Prediction for Generalizable Human Activity Recognition},
+  author={Cai, Yize and Yu, Anlan and Guo, Baoshen and Liu, Yunhuai and Hong, Zhiqing},
+  booktitle={Proceedings of the 35th ACM International Conference on Information and Knowledge Management},
+  pages={362--373},
+  year={2026}
+}
+```
